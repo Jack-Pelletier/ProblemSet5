@@ -28,7 +28,7 @@ public class EscapeRoom {
             switch (choice) {
                 case 1:
                     System.out.println("Finding available rooms for a group of 5 friends with loyalty conditions...");
-                    if (dal.TryExecutingAStoredProcedure("EscapeRooms", userName, password, "FindAvailableRoomsForGroup", 5)) {
+                    if (dal.TryExecutingAStoredProcedure("EscapeRooms", userName, password, "GetAvailableRoomsForFiveFriends", 5)) {
                         System.out.println("Successfully found available rooms.");
                     } else {
                         System.out.println("Failed to find available rooms.");
@@ -37,7 +37,7 @@ public class EscapeRoom {
 
                 case 2:
                     System.out.println("Checking room availability for a birthday reservation...");
-                    if (dal.TryExecutingAStoredProcedure("EscapeRooms", userName, password, "CheckBirthdayReservationAvailability", 5)) {
+                    if (dal.TryExecutingAStoredProcedure("EscapeRooms", userName, password, "GetAvailableRoomsForBirthday", 5)) {
                         System.out.println("Successfully checked room availability for birthday.");
                     } else {
                         System.out.println("Failed to check room availability for birthday.");
@@ -46,7 +46,7 @@ public class EscapeRoom {
 
                 case 3:
                     System.out.println("Generating loyalty reports and gift cards...");
-                    if (dal.TryExecutingAStoredProcedure("EscapeRooms", userName, password, "GenerateLoyaltyReportsAndGiftCards", userName)) {
+                    if (dal.TryExecutingAStoredProcedure("EscapeRooms", userName, password, "GenerateLoyaltyReport", userName)) {
                         System.out.println("Successfully generated loyalty reports and gift cards.");
                     } else {
                         System.out.println("Failed to generate loyalty reports and gift cards.");
@@ -55,7 +55,7 @@ public class EscapeRoom {
 
                 case 4:
                     System.out.println("Generating monthly business performance report...");
-                    if (dal.TryExecutingAStoredProcedure("EscapeRooms", userName, password, "GenerateMonthlyPerformanceReport")) {
+                    if (dal.TryExecutingAStoredProcedure("EscapeRooms", userName, password, "GenerateMonthlyReport")) {
                         System.out.println("Successfully generated monthly business performance report.");
                     } else {
                         System.out.println("Failed to generate monthly business performance report.");
