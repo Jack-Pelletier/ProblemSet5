@@ -16,7 +16,7 @@ public class EscapeRoom
         System.out.print("Enter password: ");
         String password = sc.nextLine();
         
-        sc.close();
+        
         while (true)
         {
             System.out.println("\nEscape Room System");
@@ -69,6 +69,7 @@ public class EscapeRoom
                     
                 
             }
+            sc.close();
         }
     }
    
